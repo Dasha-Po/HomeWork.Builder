@@ -3,13 +3,14 @@ public class Main {
         Person mom = new PersonBuilder()
                 .setName("Анна")
                 .setSurname("Вольф")
-                .setAge(31)
+//                .setAge(31)
                 .setCity("Сидней")
                 .build();
         Person son = mom.newChildBuilder()
                 .setName("Антошка")
                 .build();
         System.out.println("У " + mom + " есть сын, " + son);
+        mom.getAge();
 
         try {
             // Не хватает обязательных полей

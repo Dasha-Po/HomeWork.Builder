@@ -85,7 +85,12 @@ public class Person {
 
     // прочитать про OptionalInt
     public OptionalInt getAge() {
-        return OptionalInt.of(age);
+        if (hasAge) {
+            return OptionalInt.of(age);
+        } else {
+            System.out.println("Возраст человека " + name + " не задан");
+            return OptionalInt.empty();
+        }
     }
 
     public String getCity() {
